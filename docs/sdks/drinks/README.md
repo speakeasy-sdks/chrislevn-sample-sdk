@@ -1,109 +1,37 @@
 # Drinks
-(*Drinks*)
-
-## Overview
-
-The drinks endpoints.
+(*menu.drinks*)
 
 ### Available Operations
 
-* [GetDrink](#getdrink) - Get a drink.
-* [ListDrinks](#listdrinks) - Get a list of drinks.
+* [list](#list) - Get a list of drinks
 
-## GetDrink
+## list
 
-Get a drink by name, if authenticated this will include stock levels and product codes otherwise it will only include public information.
+Get a list of drinks
 
 ### Example Usage
 
-```go
-package main
+```python
+import the_speakeasy_bar
 
-import(
-	"context"
-	"log"
-	templatespeakeasybar "github.com/speakeasy-sdks/template-speakeasy-bar"
-	"github.com/speakeasy-sdks/template-speakeasy-bar/pkg/models/shared"
+s = the_speakeasy_bar.TheSpeakeasyBar(
+    api_key="<YOUR_API_KEY>",
 )
 
-func main() {
-    s := templatespeakeasybar.New(
-        templatespeakeasybar.WithSecurity(""),
-    )
 
+res = s.menu.drinks.list()
 
-    var name string = "string"
-
-    ctx := context.Background()
-    res, err := s.Drinks.GetDrink(ctx, name)
-    if err != nil {
-        log.Fatal(err)
-    }
-
-    if res.Drink != nil {
-        // handle response
-    }
-}
+if res.classes is not None:
+    # handle response
+    pass
 ```
-
-### Parameters
-
-| Parameter                                             | Type                                                  | Required                                              | Description                                           |
-| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
-| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
-| `name`                                                | *string*                                              | :heavy_check_mark:                                    | N/A                                                   |
 
 
 ### Response
 
-**[*operations.GetDrinkResponse](../../models/operations/getdrinkresponse.md), error**
+**[operations.ListDrinksV2GetResponse](../../models/operations/listdrinksv2getresponse.md)**
+### Errors
 
-
-## ListDrinks
-
-Get a list of drinks, if authenticated this will include stock levels and product codes otherwise it will only include public information.
-
-### Example Usage
-
-```go
-package main
-
-import(
-	"context"
-	"log"
-	templatespeakeasybar "github.com/speakeasy-sdks/template-speakeasy-bar"
-	"github.com/speakeasy-sdks/template-speakeasy-bar/pkg/models/shared"
-)
-
-func main() {
-    s := templatespeakeasybar.New(
-        templatespeakeasybar.WithSecurity(""),
-    )
-
-
-    var drinkType *shared.DrinkType = shared.DrinkTypeSpirit
-
-    ctx := context.Background()
-    res, err := s.Drinks.ListDrinks(ctx, drinkType)
-    if err != nil {
-        log.Fatal(err)
-    }
-
-    if res.Drinks != nil {
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                    | Type                                                                         | Required                                                                     | Description                                                                  |
-| ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
-| `ctx`                                                                        | [context.Context](https://pkg.go.dev/context#Context)                        | :heavy_check_mark:                                                           | The context to use for the request.                                          |
-| `drinkType`                                                                  | [*shared.DrinkType](../../models/shared/drinktype.md)                        | :heavy_minus_sign:                                                           | The type of drink to filter by. If not provided all drinks will be returned. |
-
-
-### Response
-
-**[*operations.ListDrinksResponse](../../models/operations/listdrinksresponse.md), error**
-
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

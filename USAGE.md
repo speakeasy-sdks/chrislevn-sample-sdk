@@ -1,33 +1,16 @@
 <!-- Start SDK Example Usage -->
+```python
+import the_speakeasy_bar
 
-
-```go
-package main
-
-import (
-	"context"
-	templatespeakeasybar "github.com/speakeasy-sdks/template-speakeasy-bar"
-	"github.com/speakeasy-sdks/template-speakeasy-bar/pkg/models/shared"
-	"log"
+s = the_speakeasy_bar.TheSpeakeasyBar(
+    api_key="<YOUR_API_KEY>",
 )
 
-func main() {
-	s := templatespeakeasybar.New(
-		templatespeakeasybar.WithSecurity(""),
-	)
 
-	var drinkType *shared.DrinkType = shared.DrinkTypeSpirit
+res = s.menu.drinks.list()
 
-	ctx := context.Background()
-	res, err := s.Drinks.ListDrinks(ctx, drinkType)
-	if err != nil {
-		log.Fatal(err)
-	}
-
-	if res.Drinks != nil {
-		// handle response
-	}
-}
-
+if res.classes is not None:
+    # handle response
+    pass
 ```
 <!-- End SDK Example Usage -->
