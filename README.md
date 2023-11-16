@@ -205,7 +205,6 @@ s = the_speakeasy_bar.TheSpeakeasyBar(client: http_client)
 
 
 <!-- Start Authentication -->
-
 ## Authentication
 
 ### Per-Client Security Schemes
