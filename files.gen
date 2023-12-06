@@ -17,13 +17,13 @@ src/the_speakeasy_bar/models/__init__.py
 src/the_speakeasy_bar/models/errors/__init__.py
 src/the_speakeasy_bar/models/operations/__init__.py
 src/the_speakeasy_bar/models/components/__init__.py
-USAGE.md
 docs/models/operations/listdrinksv2getresponse.md
 docs/models/components/drink.md
 docs/models/components/security.md
 docs/sdks/thespeakeasybar/README.md
 docs/sdks/menu/README.md
 docs/sdks/drinks/README.md
+USAGE.md
 .gitattributes
 .devcontainer/README.md
 .devcontainer/devcontainer.json
