@@ -5,7 +5,7 @@ from .menu import Menu
 from .sdkconfiguration import SDKConfiguration
 from the_speakeasy_bar import utils
 from the_speakeasy_bar.models import components
-from typing import Callable, Dict, Union
+from typing import Dict
 
 class TheSpeakeasyBar:
     menu: Menu
@@ -13,7 +13,7 @@ class TheSpeakeasyBar:
     sdk_configuration: SDKConfiguration
 
     def __init__(self,
-                 api_key: Union[str,Callable[[], str]],
+                 api_key: str ,
                  server_idx: int = None,
                  server_url: str = None,
                  url_params: Dict[str, str] = None,
