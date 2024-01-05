@@ -53,7 +53,7 @@ Once you're finished iterating and happy with the output push only the latest ve
 ## SDK Installation
 
 ```bash
-pip install git+https://github.com/speakeasy-sdks/chrislevn-sample-sdk.git
+pip install The-Speakeasy-Bar
 ```
 <!-- End SDK Installation [installation] -->
 
