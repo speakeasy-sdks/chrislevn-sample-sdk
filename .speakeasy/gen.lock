@@ -4,7 +4,7 @@ management:
   docChecksum: 73e4a14408cae4a2940f5f580cbdfd7b
   docVersion: 1.0.0
   speakeasyVersion: internal
-  generationVersion: 2.228.1
+  generationVersion: 2.233.2
   releaseVersion: 0.2.2
   configChecksum: b948ea3d93f8306fcbc0b0016c506e90
   repoURL: https://github.com/speakeasy-sdks/chrislevn-sample-sdk.git
