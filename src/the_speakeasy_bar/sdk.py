@@ -5,7 +5,7 @@ from .menu import Menu
 from .sdkconfiguration import SDKConfiguration
 from the_speakeasy_bar import utils
 from the_speakeasy_bar.models import components
-from typing import Dict
+from typing import Callable, Dict, Union
 
 class TheSpeakeasyBar:
     menu: Menu
@@ -13,7 +13,7 @@ class TheSpeakeasyBar:
     sdk_configuration: SDKConfiguration
 
     def __init__(self,
-                 api_key: str ,
+                 api_key: Union[str, Callable[[], str]],
                  server_idx: int = None,
                  server_url: str = None,
                  url_params: Dict[str, str] = None,
@@ -23,7 +23,7 @@ class TheSpeakeasyBar:
         """Instantiates the SDK configuring it with the provided parameters.
         
         :param api_key: The api_key required for authentication
-        :type api_key: Union[str,Callable[[], str]]
+        :type api_key: Union[str, Callable[[], str]]
         :param server_idx: The index of the server to use for all operations
         :type server_idx: int
         :param server_url: The server URL to use for all operations
@@ -38,7 +38,11 @@ class TheSpeakeasyBar:
         if client is None:
             client = requests_http.Session()
         
-        security = components.Security(api_key = api_key)
+        if callable(api_key):
+            def security():
+                return components.Security(api_key = api_key())
+        else:
+            security = components.Security(api_key = api_key)
         
         if server_url is not None:
             if url_params is not None:
