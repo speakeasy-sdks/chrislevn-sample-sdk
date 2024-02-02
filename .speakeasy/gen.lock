@@ -4,9 +4,9 @@ management:
   docChecksum: 73e4a14408cae4a2940f5f580cbdfd7b
   docVersion: 1.0.0
   speakeasyVersion: internal
-  generationVersion: 2.245.1
-  releaseVersion: 0.2.5
-  configChecksum: 33964e86d1f6837aa39fe2a6d55b93a4
+  generationVersion: 2.248.1
+  releaseVersion: 0.3.0
+  configChecksum: 4d2c91aad8d1ba01898d57b3e9995920
   repoURL: https://github.com/speakeasy-sdks/chrislevn-sample-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/speakeasy-sdks/chrislevn-sample-sdk.git
@@ -23,7 +23,7 @@ features:
     inputOutputModels: 2.81.1
     serverIDs: 2.81.1
   python:
-    core: 4.4.3
+    core: 4.4.4
     devContainers: 2.86.0
     examples: 2.81.3
     globalSecurity: 2.83.2
