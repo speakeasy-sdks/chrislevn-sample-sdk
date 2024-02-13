@@ -99,6 +99,7 @@ Handling errors in this SDK should largely match your expectations.  All operati
 
 ```python
 import the_speakeasy_bar
+from the_speakeasy_bar.models import errors
 
 s = the_speakeasy_bar.TheSpeakeasyBar(
     api_key="<YOUR_API_KEY>",
@@ -109,7 +110,7 @@ res = None
 try:
     res = s.menu.drinks.list()
 except errors.SDKError as e:
-    print(e)  # handle exception
+    # handle exception
     raise(e)
 
 if res.classes is not None:
