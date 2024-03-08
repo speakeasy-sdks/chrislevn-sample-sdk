@@ -3,10 +3,10 @@ id: db19171e-98a4-4f1e-8a5b-64d273cf6429
 management:
   docChecksum: 73e4a14408cae4a2940f5f580cbdfd7b
   docVersion: 1.0.0
-  speakeasyVersion: internal
-  generationVersion: 2.275.4
-  releaseVersion: 0.5.0
-  configChecksum: 9139b44bfc1f026e227b1db68ef82547
+  speakeasyVersion: 1.204.1
+  generationVersion: 2.279.1
+  releaseVersion: 0.6.0
+  configChecksum: c75be5a7f5e2d1e9616fb29534a70cbb
   repoURL: https://github.com/speakeasy-sdks/chrislevn-sample-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/speakeasy-sdks/chrislevn-sample-sdk.git
@@ -23,18 +23,20 @@ features:
     inputOutputModels: 2.81.1
     serverIDs: 2.81.1
   python:
-    core: 4.5.0
+    core: 4.5.1
     devContainers: 2.86.0
     examples: 2.81.3
     globalSecurity: 2.83.4
     globalServerURLs: 2.82.1
     groups: 2.81.2
     nameOverrides: 2.81.1
+    responseFormat: 0.1.0
 generatedFiles:
   - src/the_speakeasy_bar/sdkconfiguration.py
   - src/the_speakeasy_bar/drinks.py
   - src/the_speakeasy_bar/menu.py
   - src/the_speakeasy_bar/sdk.py
+  - py.typed
   - pylintrc
   - setup.py
   - src/the_speakeasy_bar/__init__.py

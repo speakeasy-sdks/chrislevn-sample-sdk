@@ -75,6 +75,7 @@ res = s.menu.drinks.list()
 if res.classes is not None:
     # handle response
     pass
+
 ```
 <!-- End SDK Example Usage [usage] -->
 
@@ -116,6 +117,7 @@ except errors.SDKError as e:
 if res.classes is not None:
     # handle response
     pass
+
 ```
 <!-- End Error Handling [errors] -->
 
@@ -146,6 +148,7 @@ res = s.menu.drinks.list()
 if res.classes is not None:
     # handle response
     pass
+
 ```
 
 
@@ -166,6 +169,7 @@ res = s.menu.drinks.list()
 if res.classes is not None:
     # handle response
     pass
+
 ```
 <!-- End Server Selection [server] -->
 
@@ -216,6 +220,7 @@ res = s.menu.drinks.list()
 if res.classes is not None:
     # handle response
     pass
+
 ```
 <!-- End Authentication [security] -->
 
